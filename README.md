@@ -4,12 +4,12 @@
   <img src="resources/SafeSpaceLogo.jpg" alt="SafeSpace Logo" width="200"/>
 
   <!-- Badges -->
-  ![Status](https://img.shields.io/badge/status-pre--alpha-orange)
-  ![License](https://img.shields.io/badge/license-pending-red)
-  ![PRs](https://img.shields.io/badge/PRs-not%20yet%20accepted-red)
-  ![Node](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen)
-  ![Security Priority](https://img.shields.io/badge/security-maximum-blue)
-  
+![Status](https://img.shields.io/badge/status-pre--alpha-orange)
+![PRs](https://img.shields.io/badge/PRs-not%20yet%20accepted-red)
+![Python](https://img.shields.io/badge/python-%3E%3D%203.9-brightgreen)
+![Streamlit](https://img.shields.io/badge/streamlit-%3E%3D%200.84.0-brightgreen)
+![Security Priority](https://img.shields.io/badge/security-maximum-blue)
+
   <h3>A Digital Mental Health Companion for Students</h3>
 
   <p align="center">
