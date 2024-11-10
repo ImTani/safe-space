@@ -36,8 +36,8 @@ I am creating SafeSpace, a digital mental health companion that combines AI empa
 ### Technical Stack
 ```mermaid
 graph TD
-    A[Frontend - React] --> D[API Gateway]
-    B[AI Engine - TensorFlow] --> D
+    A[Frontend - Streamlit] --> D[API Gateway]
+    B[AI Engine - Ollama] --> D
     C[Security Layer] --> D
     D --> E[Backend Services]
     E --> F[Database]
@@ -86,10 +86,10 @@ flowchart LR
 ```
 
 ### Core Components
-- **Frontend**: React.js with TypeScript
-- **Backend**: Node.js microservices
-- **AI Engine**: TensorFlow/PyTorch
-- **Database**: PostgreSQL with encryption
+- **Frontend**: Streamlit
+- **Backend**: Python microservices
+- **AI Engine**: Ollama
+- **Database**: Not Yet Decided
 - **Security**: End-to-end encryption, Zero-knowledge architecture
 
 ## Development Setup
@@ -100,11 +100,10 @@ flowchart LR
 <details>
 <summary>Prerequisites (Planned)</summary>
 
-- Node.js ≥ 18.0.0
-- Docker
-- PostgreSQL
+- Streamlit
 - Python 3.9+
-- TensorFlow 2.x
+- Ollama
+- Docker
 </details>
 
 ## Security
@@ -137,19 +136,11 @@ flowchart LR
 ## Roadmap
 
 <details>
-<summary>Q1 2024</summary>
+<summary>v0.1.0</summary>
 
 - [ ] Initial repository setup
 - [ ] Core architecture design
 - [ ] Security framework implementation
-</details>
-
-<details>
-<summary>Q2 2024</summary>
-
-- [ ] Basic AI chatbot implementation
-- [ ] Frontend development
-- [ ] Initial security audit
 </details>
 
 ## License
