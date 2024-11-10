@@ -1,7 +1,7 @@
 # SafeSpace
 
 <div align="center">
-  <img src="/api/placeholder/200/200" alt="SafeSpace Logo" width="200"/>
+  <img src="resources/SafeSpaceLogo.jpg" alt="SafeSpace Logo" width="200"/>
 
   <!-- Badges -->
   ![Status](https://img.shields.io/badge/status-pre--alpha-orange)
