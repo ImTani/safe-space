@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/status-pre--alpha-orange)
 ![PRs](https://img.shields.io/badge/PRs-not%20yet%20accepted-red)
 ![Python](https://img.shields.io/badge/python-%3E%3D%203.9-brightgreen)
-![Streamlit](https://img.shields.io/badge/streamlit-%3E%3D%200.84.0-brightgreen)
+![Streamlit](https://img.shields.io/badge/streamlit-%3E%3D%201.0.0-brightgreen)
 ![Security Priority](https://img.shields.io/badge/security-maximum-blue)
 
   <h3>A Digital Mental Health Companion for Students</h3>
@@ -23,7 +23,7 @@
 </div>
 
 > [!IMPORTANT]  
-> This README is a placeholder and will be updated once the initial application is built. The repository is currently in pre-development phase.
+> This README is a placeholder and will be updated as development progresses. The repository is currently in pre-development phase.
 
 > [!WARNING]
 > SafeSpace is not a replacement for professional mental health services. If you're experiencing a mental health emergency, please contact your local crisis hotline or emergency services immediately.
@@ -31,17 +31,19 @@
 ## Overview
 
 ### Vision
-I am creating SafeSpace, a digital mental health companion that combines AI empathy with human understanding to ensure no student ever has to face their emotional struggles alone.
+SafeSpace is a digital mental health companion that combines AI empathy with human understanding to ensure no student ever has to face their emotional struggles alone.
 
 ### Technical Stack
 ```mermaid
 graph TD
-    A[Frontend - Streamlit] --> D[API Gateway]
-    B[AI Engine - Ollama] --> D
-    C[Security Layer] --> D
-    D --> E[Backend Services]
-    E --> F[Database]
-    E --> G[AI Models]
+    A[Frontend - Streamlit] --> B[Security Layer]
+    B --> C[Services Layer]
+    C --> D[AI Engine]
+    C --> E[Data Layer]
+    D --> F[Prompt Templates]
+    E --> G[Models]
+    E --> H[Repositories]
+    E --> I[Cache]
 ```
 
 ## Features
@@ -53,24 +55,24 @@ graph TD
     <th>Description</th>
   </tr>
   <tr>
-    <td>AI Therapy Chatbot</td>
-    <td><img src="https://img.shields.io/badge/status-planned-yellow"></td>
-    <td>LLM-powered empathetic conversation with privacy-first design</td>
+    <td>Supportive Chat Interface</td>
+    <td><img src="https://img.shields.io/badge/status-in--design-yellow"></td>
+    <td>AI-powered empathetic conversation with comprehensive safety checks</td>
   </tr>
   <tr>
     <td>Guided Journaling</td>
-    <td><img src="https://img.shields.io/badge/status-planned-yellow"></td>
-    <td>AI-assisted journaling with emotional intelligence</td>
+    <td><img src="https://img.shields.io/badge/status-in--design-yellow"></td>
+    <td>Structured self-reflection with AI-assisted prompts and analysis</td>
   </tr>
   <tr>
-    <td>Anonymous Community</td>
-    <td><img src="https://img.shields.io/badge/status-planned-yellow"></td>
-    <td>Safe, moderated space for peer support</td>
+    <td>Community Platform</td>
+    <td><img src="https://img.shields.io/badge/status-in--design-yellow"></td>
+    <td>Moderated peer support system with anonymity protection</td>
   </tr>
   <tr>
-    <td>Crisis Integration</td>
-    <td><img src="https://img.shields.io/badge/status-planned-yellow"></td>
-    <td>Emergency services connection with user consent</td>
+    <td>Crisis Resources</td>
+    <td><img src="https://img.shields.io/badge/status-in--design-yellow"></td>
+    <td>Integrated emergency services access with proactive risk assessment</td>
   </tr>
 </table>
 
@@ -79,41 +81,90 @@ graph TD
 ### Security-First Design
 ```mermaid
 flowchart LR
-    A[User Input] --> B{Encryption Layer}
-    B --> C[Anonymous Processing]
-    C --> D[Secure Storage]
-    D --> E[End-to-End Encrypted Output]
+    A[User Input] --> B[Authentication]
+    B --> C[Encryption]
+    C --> D[Anonymization]
+    D --> E[Safety Checking]
+    E --> F[Secure Processing]
+    F --> G[Audit Logging]
 ```
 
 ### Core Components
-- **Frontend**: Streamlit
-- **Backend**: Python microservices
-- **AI Engine**: Ollama
-- **Database**: Not Yet Decided
-- **Security**: End-to-end encryption, Zero-knowledge architecture
+- **Frontend**: 
+  - Streamlit-based interface
+  - Modular components for chat, journaling, and community
+  - Responsive design with crisis resources
+- **Security Layer**:
+  - Authentication and encryption
+  - Anonymization services
+  - Compliance monitoring
+  - Audit logging
+- **AI Engine**:
+  - LLM management system
+  - Context-aware processing
+  - Safety checking pipeline
+  - Sentiment analysis
+- **Services Layer**:
+  - Chat service with message handling
+  - Journal service with prompt generation
+  - Community service with moderation
+  - Analytics with risk assessment
+- **Data Layer**:
+  - Structured data models
+  - Efficient repositories
+  - Cache management
+  - Database migrations
 
 ## Development Setup
 
-> [!NOTE]
-> Setup instructions will be provided once initial development begins.
+### Prerequisites
+```plaintext
+Python >= 3.9
+Streamlit >= 1.0.0
+Ollama >= 0.1.0
+```
 
-<details>
-<summary>Prerequisites (Planned)</summary>
+### Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/safespace.git
+   cd safespace
+   ```
 
-- Streamlit
-- Python 3.9+
-- Ollama
-- Docker
-</details>
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   ```
+
+3. Activate the virtual environment:
+   - Windows: 
+     ```bash
+     .\venv\Scripts\activate
+     ```
+   - Unix/macOS:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Configure environment:
+   ```bash
+   cp config/.env.example .env
+   # Edit .env with your configurations
+   ```
 
 ## Security
 
-### Priorities
-- End-to-end encryption
-- Zero-knowledge architecture
-- Anonymous profiles
-- Secure data handling
-- Regular security audits
+### Core Security Features
+- End-to-end encryption (encryption.py)
+- User authentication system (authentication.py)
+- Data anonymization (anonymization.py)
+- Security audit logging (audit.py)
+- Compliance monitoring (compliance.py)
 
 ### Compliance Targets
 - HIPAA compatibility
@@ -121,27 +172,28 @@ flowchart LR
 - CCPA compliance
 - SOC 2 certification
 
+## Testing
+
+The project includes comprehensive testing:
+- Unit tests for core services
+- Integration tests for AI pipeline
+- Security-specific test suite
+- User flow testing
+
 ## Contributing
 
 > [!NOTE]
-> While we're not yet accepting contributions, we're planning to open the project for community involvement soon.
+> While we're not yet accepting contributions, we have established a structured contribution framework for when we open the project for community involvement.
 
-### Planned Contribution Process
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to the branch
-5. Open a Pull Request
+See CONTRIBUTING.md and CODE_OF_CONDUCT.md for detailed guidelines.
 
-## Roadmap
+## Documentation
 
-<details>
-<summary>v0.1.0</summary>
-
-- [ ] Initial repository setup
-- [ ] Core architecture design
-- [ ] Security framework implementation
-</details>
+Find detailed documentation in the `/docs` directory:
+- README.md: Project overview
+- SECURITY.md: Security practices
+- CONTRIBUTING.md: Contribution guidelines
+- CODE_OF_CONDUCT.md: Community standards
 
 ## License
 Pending. Will be updated before initial release.
