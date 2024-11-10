@@ -117,7 +117,7 @@ flowchart LR
 
 ## Development Setup
 
-### Prerequisites
+### Prerequisites (Planned)
 ```plaintext
 Python >= 3.9
 Streamlit >= 1.0.0
@@ -160,11 +160,11 @@ Ollama >= 0.1.0
 ## Security
 
 ### Core Security Features
-- End-to-end encryption (encryption.py)
-- User authentication system (authentication.py)
-- Data anonymization (anonymization.py)
-- Security audit logging (audit.py)
-- Compliance monitoring (compliance.py)
+- End-to-end encryption
+- User authentication system
+- Data anonymization
+- Security audit logging
+- Compliance monitoring
 
 ### Compliance Targets
 - HIPAA compatibility
@@ -185,15 +185,14 @@ The project includes comprehensive testing:
 > [!NOTE]
 > While we're not yet accepting contributions, we have established a structured contribution framework for when we open the project for community involvement.
 
-See CONTRIBUTING.md and CODE_OF_CONDUCT.md for detailed guidelines.
+See [Contributing](app/docs/CONTRIBUTING.md) and the [Code of Conduct](app/docs/CONTRIBUTING.md) for detailed guidelines.
 
 ## Documentation
 
-Find detailed documentation in the `/docs` directory:
-- README.md: Project overview
-- SECURITY.md: Security practices
-- CONTRIBUTING.md: Contribution guidelines
-- CODE_OF_CONDUCT.md: Community standards
+Find detailed documentation in the [`/docs`](app/docs/) directory:
+- [Security](app/docs/SECURITY.md): Security practices
+- [Contributing](app/docs/CONTRIBUTING.md): Contribution guidelines
+- [Code of Conduct](app/docs/CONTRIBUTING.md): Community standards
 
 ## License
 Pending. Will be updated before initial release.
